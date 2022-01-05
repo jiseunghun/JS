@@ -1,0 +1,19 @@
+.main_2_img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.main_2_info {
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.main_2_info_contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
