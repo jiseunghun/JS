@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <style>
+      .line {
+        border: 10px solid pink;
+      }
+    </style>
+    <script>
+      //   window.onload 와 같은 의미로 사용됨
+      //   $(document).ready(function () {}) 과 같다.
+
+      $(function () {
+        $("img").hover(
+          // function () {
+          //   $(this).addClass("line");
+          // },
+          // function () {
+          //   $(this).removeClass("line");
+          // }
+          function () {
+            $(this).toggleClass("line");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <img src="../../img0103/mainImage/K-037.png" />
+  </body>
+</html>

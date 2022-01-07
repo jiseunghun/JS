@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img:hover {
+  box-shadow: 2px 2px 10px rgb(198, 209, 208);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.selectBox {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 3px solid gray;
+  border-top: 3px solid gray;
+}
+
+img {
+  height: 100px;
+}
+
+.imgBox_container img {
+  height: 450px;
+}
+
+.imgBox_container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 10px;
+  height: 450px;
+  width: 440px;
+  background-color: rgb(198, 209, 208);
+}

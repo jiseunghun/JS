@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px;
+}
+
+div {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background-color: palegoldenrod;
+  border: 2px solid black;
+  text-align: center;
+}
