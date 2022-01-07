@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="ex3.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkbox와 radio를 활용해보기</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Licorice&family=Open+Sans:wght@300&family=Oswald:wght@300&family=The+Nautigal:wght@700&display=swap");
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" id="scales" name="scales" value="yes" checked />
+      <label for="scales">Scales</label>
+
+      <label><input type="radio" value="red" name="rcolor" />빨간색</label>
+      <label
+        ><input type="radio" value="green" name="rcolor" checked />초록색</label
+      >
+      <!-- option같은 경우는 미리 선택해놓고 싶으면 select radio는 미리
+      선택해놓고싶으면 checked -->
+
+      <label><input type="radio" value="blue" name="rcolor" />파란색</label>
+      <label><input type="radio" value="pink" name="rcolor" />분홍색</label>
+      <label><input type="radio" value="white" name="rcolor" />흰색</label>
+    </div>
+    <br />
+    <div class="box"></div>
+    <script>
+      //val()은 체크상태 상관없이 value값 얻는다. 기본상태는 on 형태로 이루어짐
+      $("#scales").click(function () {
+        let val = $(this).val();
+        // console.log(val);
+
+        //check된 값을 얻기위해서는 이렇게 사용함.
+        let check = $("#scales").is(":checked");
+        console.log(check);
+
+        if (check) {
+          $(".box").css("border-radius", "30px");
+        } else {
+          $(".box").css("border-radius", "0px");
+        }
+      });
+      //radio event 를 가지고 해보기
+
+      $("input[name = rcolor]").click(function () {
+        let color = $(this).val();
+        console.log(color);
+
+        $(".box").css({
+          "background-color": color,
+        });
+      });
+    </script>
+  </body>
+</html>

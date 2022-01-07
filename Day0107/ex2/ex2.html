@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="ex2.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ex2</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Licorice&family=Open+Sans:wght@300&family=Oswald:wght@300&family=The+Nautigal:wght@700&display=swap");
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <form>
+      <!-- fieldset에 disable을 사용하면 그 안에 들어가있는 input은 사용할수 없음 -->
+      <div class="box" style="font-family: Open Sans">Have a nice Day</div>
+      <div class="selet_Font_Size_BOX">
+        <fieldset>
+          <legend>form & fieldset 사용</legend>
+          <div>
+            <label for="colorPicker">Change your color =</label>
+            <input type="color" class="colorPicker" value="#ffccff" />
+          </div>
+        </fieldset>
+        <div class="select_Font">
+          <div>
+            <label for="select_Font_Size">font-size : </label>
+            <select class="select_Font_Size">
+              <option>15</option>
+              <option selected>20</option>
+              <option>25</option>
+              <option>30</option>
+            </select>
+          </div>
+          <div>
+            <label for="select_Font_Family">font-Family : </label>
+            <select class="select_Font_Family">
+              <option value="Licorice">Licorice</option>
+              <option value="Oswald">Oswald</option>
+              <option value="Open Sans" selected>Open Sans</option>
+              <option value="cursive">The Nautigal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="ex2.js"></script>
+  </body>
+</html>

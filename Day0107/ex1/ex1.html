@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js 및 제이쿼리</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <script>
+      //제이쿼리를 이용한 .html .text .eq(number)을 사용함
+      $(function () {
+        $("#TXT1").keyup(function () {
+          const data = $(this).val();
+          $("b").eq(0).text(data);
+        });
+        $("#TXT2").keyup(function () {
+          const data = $(this).val();
+          console.log(isNaN(data));
+
+          if (isNaN(data)) {
+            // alert("숫자를 입력하세요");
+
+            $("b").eq(1).html("<font color=red>숫자를 입력하세요</font>");
+          } else {
+            $("b").eq(1).text(data);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="TXT1" style="width: 150px" />
+    &nbsp; &nbsp; &nbsp;
+    <b>0번 b tag</b>
+    <b></b>
+    <input
+      type="text"
+      id="TXT2"
+      style="width: 250px"
+      placeholder="Phone Numbers"
+    />
+    <script src="ex1.js"></script>
+  </body>
+</html>

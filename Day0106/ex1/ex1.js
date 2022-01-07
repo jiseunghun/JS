@@ -25,16 +25,20 @@ let nowimg = parseInt(imgCss.width);
 const resizeImgEvent = {
   samllImgfuntion: function () {
     console.log(nowimg);
-    if (100 < nowimg < 500) {
+    if (400 <= nowimg && nowimg <= 500) {
+      //문법이 이상했음 and 나 or을 가지고 해야지만 문법이 통과됨
       nowimg -= 10;
       img.style.width = `${nowimg}px`;
     } else {
+      nowimg += 10;
+      img.style.width = `${nowimg}px`;
+
       alert("너무작습니다.");
     }
   },
   bigImgfuntion: function () {
     console.log(nowimg);
-    if (nowimg < 1000) {
+    if (nowimg <= 600) {
       nowimg += 10;
       img.style.width = `${nowimg}px`;
     } else {
