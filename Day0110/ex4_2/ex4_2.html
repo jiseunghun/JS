@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자알아맞추기</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Island+Moments&family=Jua&family=Nanum+Pen+Script&family=Vujahday+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+      div.game {
+        margin-left: 300px;
+        margin-top: 50px;
+      }
+
+      div.game h2 {
+        width: 500px;
+        text-align: center;
+        font-family: "Gamja Flower";
+      }
+
+      div.game div.inp {
+        margin-left: 200px;
+      }
+
+      div.msg {
+        margin-top: 20px;
+        width: 500px;
+        height: 200px;
+        font-family: "Nanum Pen Script";
+        border: 1px solid gray;
+        padding: 10px 10px;
+        font-size: 22px;
+      }
+
+      img.success {
+        position: absolute;
+        left: 900px;
+        top: 150px;
+      }
+
+      #btnrefresh {
+        width: 500px;
+        margin-bottom: 10px;
+        height: 50px;
+        font-family: "Jua";
+      }
+    </style>
+    <script>
+      let cnt; //카운트
+      let rnd; //난수구할변수
+
+      $(function () {
+        sijak();
+
+        //다시하기 버튼 클릭시 sijak() 함수 호출
+        $("#btnrefresh").click(function () {
+          sijak();
+        });
+
+        //입력후 엔터를 누를경우 확인버튼 이벤트 발생
+        $("#txtsu").keyup(function (e) {
+          if (e.keyCode == 13) {
+            //click 이벤트 강제 호출
+            $("#btngo").trigger("click");
+          }
+        });
+
+        //확인버튼
+        $("#btngo").click(function () {
+          let data = $("#txtsu").val(); //입력한값을 읽는다
+          if (data == "") {
+            alert("숫자를 입력해주세요");
+            $("#txtsu").focus(); //포커스 주기
+          } else if (isNaN(data)) {
+            alert("숫자로만 입력해주세요");
+            $("#txtsu").val(""); //입력값 지우기
+            $("#txtsu").focus(); //포커스 주기
+          } else {
+            //입력받은 값을 숫자로 변환
+            let su = parseInt(data);
+            let s = "";
+            //비교
+            cnt++; //1증가, cnt+=1, cnt=cnt+1
+            if (su > rnd) {
+              s += cnt + "회:" + su + "보다 작습니다<br>";
+            } else if (su < rnd) {
+              s += cnt + "회:" + su + "보다 큽니다<br>";
+            } else {
+              s += cnt + "회:" + su + "<br>정답입니다<br>";
+              $("img.success").show();
+            }
+            let ss = $("div.msg").html(); //기존 출력데이타
+            $("div.msg").html(ss + s); // 기존메세지에 새로 구한 메세지 더해서 출력
+            $("#txtsu").val(""); //입력값 지우기
+            $("#txtsu").focus(); //포커스 주기
+          }
+        });
+      });
+
+      function sijak() {
+        cnt = 0;
+        //1~100  사이의 난수 구하기
+        rnd = parseInt(Math.random() * 100) + 1;
+        console.log(rnd);
+        //이미지 안보이게 하기
+        $("img.success").hide();
+        //메세지창의 글자 모두 지우기
+        $("div.msg").html("");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="game">
+      <h2 class="alert alert-danger">숫자 알아맞추기</h2>
+      <button type="button" class="btn btn-info" id="btnrefresh">
+        <span class="glyphicon glyphicon-repeat"></span>
+        &nbsp;다시하기
+      </button>
+
+      <div class="form-inline inp">
+        <input
+          type="text"
+          id="txtsu"
+          style="width: 100px"
+          class="form-control"
+          autofocus
+        />
+        <button type="button" class="btn btn-danger btn-sm" id="btngo">
+          확인
+        </button>
+      </div>
+      <div class="msg">123</div>
+      <img src="../image/image_03.png" class="success" />
+    </div>
+  </body>
+</html>

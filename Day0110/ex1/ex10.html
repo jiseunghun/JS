@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+      .moveImg {
+        position: absolute;
+        top: 300px;
+        right: 500px;
+      }
+    </style>
+    <script>
+      // let xPosition = 500;
+      // let yposition = 300;
+      // $(function () {
+      //   $(".right").click(function () {
+      //     xPosition += 10;
+      //     show();
+      //   });
+      //   $(".left").click(function () {
+      //     xPosition -= 10;
+      //     show();
+      //   });
+      //   $(".up").click(function () {
+      //     yposition -= 10;
+      //     show();
+      //   });
+      //   $(".down").click(function () {
+      //     yposition += 10;
+      //     show();
+      //   });
+      // });
+      // function show() {
+      //   $(".imgPositionbox").html(`left : ${xPosition} right : ${yposition}`);
+
+      //   $(".moveImg").css({
+      //     left: xPosition,
+      //     top: yposition,
+      //   });
+      // }
+    </script>
+  </head>
+  <body>
+    <div class="imgPositionbox"></div>
+    <button class="btn right">오른쪽</button>
+    <button class="btn left">왼쪽</button>
+    <button class="btn up">위</button>
+    <button class="btn down">아래</button>
+    <img class="moveImg" src="../img0110/jquery_image/08.png" />
+    <script src="ex10.js"></script>
+  </body>
+</html>

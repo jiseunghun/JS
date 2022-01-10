@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Island+Moments&family=Jua&family=Nanum+Pen+Script&family=Vujahday+Script&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    /> -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+      .imgMove {
+        position: absolute;
+        width: 170px;
+      }
+      div.box {
+        margin-left: 500px;
+      }
+      div.box button {
+        width: 120px;
+      }
+    </style>
+    <!-- <script>
+      let xpos = 0;
+      $(function () {
+        $("button.start").click(function () {
+          inter = setInterval(function () {
+            xpos += 20;
+            $("#img1").css("left", xpos + "px");
+            if (xpos >= 1500) {
+              xpos = 0;
+            }
+          }, 200);
+        });
+
+        $("button.stop").click(function () {
+          clearInterval(inter);
+        });
+      });
+    </script> -->
+  </head>
+  <body>
+    <div class="box">
+      <button type="button" class="btn start">Start</button>
+      <button type="button" class="btn stop">Stop</button>
+    </div>
+    <div>
+      <img src="../../img0110/jquery_image/04.png" class="imgMove" />
+    </div>
+    <script src="ex3.js"></script>
+  </body>
+</html>

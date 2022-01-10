@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022년 1월 10일</title>
+  </head>
+  <body>
+    <div class="title">
+      <span>제 1교시</span>
+      <span>2022년 1월 10일</span>
+      <span>빅데이터 전문가 과정</span>
+      <span class="average_score"></span>
+    </div>
+    <form class="main input">
+      <div class="input_subject">
+        <div class="textinput name">
+          <lable class="lableing"><span>이 름</span><span>:</span></lable
+          ><input
+            type="text"
+            maxlength="3"
+            class="input_subject_name"
+            required
+          />
+        </div>
+        <div class="textinput subject_html">
+          <lable class="lableing"><span>HTML</span><span>:</span></lable
+          ><input
+            type="text"
+            maxlength="3"
+            class="input_subject_html"
+            required
+          />
+        </div>
+        <div class="textinput subject_css">
+          <lable class="lableing"><span>CSS</span><span>:</span></lable
+          ><input
+            type="text"
+            maxlength="3"
+            class="input_subject_css"
+            required
+          />
+        </div>
+        <div class="textinput subject_js">
+          <lable class="lableing"><span>JS</span><span>:</span></lable
+          ><input type="text" maxlength="3" class="input_subject_js" required />
+        </div>
+        <div class="main_btn_box">
+          <button type="button" class="subject_btn">결과확인</button>
+        </div>
+      </div>
+      <div class="output hide">
+        <div class="output_title">
+          <img
+            class="open-post_room-img"
+            src="https://avatars.githubusercontent.com/u/75515312"
+          />
+          <span>결과 확인</span>
+          <img
+            class="open-post_room-img"
+            src="https://avatars.githubusercontent.com/u/75515312"
+          />
+        </div>
+        <div class="output_resource">
+          <div class="output_resource_name"></div>
+          <div class="output_resource_html"></div>
+          <div class="output_resource_css"></div>
+          <div class="output_resource_js"></div>
+          <div class="output_resource_total"></div>
+          <div class="output_resource_average"></div>
+          <div class="output_resource_evaluation"></div>
+        </div>
+      </div>
+    </form>
+    <script src="homework.js"></script>
+  </body>
+</html>

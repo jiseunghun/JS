@@ -1,0 +1,5 @@
+:root {
+  --horizontal_space: 20px;
+  --main_border: 3px double black;
+  --main_bgcolor: hsla(0, 0%, 0%, 0.1);
+}
