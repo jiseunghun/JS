@@ -1,0 +1,45 @@
+body {
+  margin: 0px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.main_result {
+  margin-top: 50px;
+  width: 50%;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_result_header {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 20px;
+  border-bottom: 3px solid black;
+  height: 30%;
+  width: 100%;
+}
+.main_result_output {
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 70%;
+  width: 100%;
+}
+
+/* 여기서부터는 main_input창 디자인 */
+
+.main_input input {
+  width: 145px;
+  box-sizing: border-box;
+}

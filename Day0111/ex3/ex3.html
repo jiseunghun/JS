@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Island+Moments&family=Jua&family=Nanum+Pen+Script&family=Vujahday+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+      .box {
+        margin: 50px 200px;
+      }
+
+      .box * {
+        font-size: 20px;
+        font-family: "Gamja Flower";
+      }
+    </style>
+    <script>
+      $(function () {
+        let myaudio = $("#myaudio");
+        $("#selmusic").change(function () {
+          let music = $(this).val();
+
+          //출력
+          $("#playmsg").text(music);
+          $(myaudio).attr("src", "../Music/" + music);
+          $(myaudio).trigger("play");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <audio id="myaudio" src="" controls="controls"></audio>
+
+    <div class="box">
+      <select id="selmusic" class="form-control" style="width: 300px">
+        <option selected disabled hidden>MUsic 선택</option>
+        <option>08. 버스커 버스커 - 동경소녀.mp3</option>
+        <option>001-박효신-야생화.mp3</option>
+        <option>045. 임창정 - 그때 또 다시(again).mp3</option>
+        <option>086-바이브-술이야.mp3</option>
+        <option>홍진영 - 산다는 건 (Cheer Up).mp3</option>
+      </select>
+    </div>
+
+    <h1
+      class="alert alert-success"
+      style="width: 700px; margin: 10px 50px"
+      id="playmsg"
+    >
+      Play
+    </h1>
+  </body>
+</html>

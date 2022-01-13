@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex1</title>
+    <style>
+      .hide {
+        display: none;
+      }
+      .fa-camera-retro {
+        cursor: pointer;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="text" class="inp" />
+    <input type="text" class="inp" />
+    <div class="a"></div>
+    <div class="b"></div> -->
+    <!-- <script>
+      const inputText = document.querySelectorAll(".inp");
+      const diva = document.querySelector(".a");
+      onkeyup;
+      function keyupbtn(e) {
+        // const keyupValue = this.value;
+        const keyupValue = e.target.value;
+        diva.innerHTML = `${keyupValue}`;
+      }
+
+      inputText[0].onkeyup = keyupbtn;
+      inputText[1].onkeydown = keyupbtn;
+    </script> -->
+    <h2>이미지 미리보기</h2>
+    <label for="flleInput"><i class="fas fa-camera-retro camera"></i></label>
+    <input type="file" multiple id="flleInput" class="hide" />
+    <script>
+      const inputImgEmo = document.querySelector(".camera");
+      const inputImg = document.querySelector("#flleInput");
+
+      function readUrl() {
+        const readUrlArr = inputImg.files;
+        console.log(readUrlArr);
+      }
+
+      function readUrlEmo() {
+        inputImg.onchange = readUrl;
+      }
+
+      inputImgEmo.onclick = readUrlEmo;
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e583ed2a8b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

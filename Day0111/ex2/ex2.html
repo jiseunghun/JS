@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="ex2.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card">
+      <select name="" id="cardcount">
+        <option value="" selected disabled hidden>카드선택</option>
+        <option value="BC카드">BC카드</option>
+        <option value="외한카드">외한카드</option>
+        <option value="롯데카드">롯데카드</option>
+        <option value="국민카드">국민카드</option>
+        <option value="신한카드">신한카드</option>
+      </select>
+      <div class="card_box">
+        <input type="text" class="card_input" id="num1" maxlength="4" />
+      </div>
+      <div class="card_box">
+        <input type="text" class="card_input" id="num2" maxlength="4" />
+      </div>
+      <div class="card_box">
+        <input type="text" class="card_input" id="num3" maxlength="4" />
+      </div>
+      <div class="card_box">
+        <input type="password" class="card_input" id="num4" maxlength="4" />
+      </div>
+      <button type="button" class="goBtn">확인</button>
+    </div>
+    <div class="result"></div>
+
+    <script src="ex2.js"></script>
+  </body>
+</html>
